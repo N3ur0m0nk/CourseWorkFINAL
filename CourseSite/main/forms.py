@@ -2,13 +2,8 @@ from django import forms
 import datetime
 
 
-class CreateListForm(forms.Form):
-	name = forms.CharField(label="Name ", max_length=300)
-
-
 class Dogovor(forms.Form):
 	name = forms.CharField(label="Name ", max_length=300)
-	# Date = forms.DateField(initial=datetime.date.today)
 	FullFIO = forms.CharField(label="FullFIO ", max_length=300)
 	Specialty = forms.CharField(label="Specialty", max_length=300)
 	FullKafedra = forms.CharField(label="FullKafedra", max_length=300)

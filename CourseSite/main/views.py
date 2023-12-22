@@ -1,13 +1,11 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
-from django.utils import timezone
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
 from .models import *
 from .forms import *
 from .Filler import *
 
 
 # Create your views here.
-
 def index(request, id):
     ls = Form1.objects.get(name=id)
     keyword_dict['${Date}'] = ls.Date.strftime('%d.%m.%Y')
@@ -56,8 +54,3 @@ def get_name(request):
 
 def home(request):
     return render(request, "main/home.html", {})
-
-
-def view(request):
-    l = Form.objects.all()
-    return render(request, "main/view.html", {"lists": l})
