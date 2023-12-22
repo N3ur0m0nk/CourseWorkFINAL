@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Форма
+{% endblock %}
+
+{% block content %}
+    <h1>{{ls.name}}</h1>
+    <u1>
+        {% for item in ls %}
+            <li>{{item.text}}</li>
+        {% endfor %}
+    </u1>
+
+{% endblock %}

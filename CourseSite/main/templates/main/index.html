@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ls.name}}{% endblock %}
+
+{% block content %}
+<h2>{{ls.name}}</h2>
+<b>Фамилия Имя Отчество:</b> {{ls.FullFIO}}
+<br>
+<b>Фамилия И.О.:</b> {{ls.FIO}}
+<br>
+<b>День рождения:</b> {{ls.Birthday}}
+<br>
+<b>Серия и номер паспорта:</b> {{ls.Passport_Number}}
+<br>
+<b>Место выдачи:</b> {{ls.Passport_Vidacha}}
+<br>
+<b>Дата выдачи:</b> {{ls.Passport_Date}}
+<br>
+<b>Адрес регистрации:</b> {{ls.Registration_Address}}
+<br>
+<b>Специальность:</b> {{ls.Specialty}}
+<br>
+<b>Полное название кафедры:</b> {{ls.FullKafedra}}
+<br>
+<b>Название кафедры:</b> {{ls.Kafedra}}
+<br>
+<b>День составления договора:</b> {{ls.Date}}
+<br>
+<br>
+<a href="Ученический договор ИТОГ.docx" download=""><button name="save", type="button", class="btn btn-success">Скачать</button></a>
+{% endblock %}
